@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Cadastro</title>
+<link rel="shortcut icon" type="image/png" href="/src/image/Logo_P.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <img src="../image/logo-paranoa.png" alt="">
+
+<!-- Título principal -->
+<h1>Solicitação de Cadastros</h1>
+
+<!-- Informações de Contato -->
+<div id="contatoFixo">
+    <h2>Informações de Contato</h2>
+    <input type="email" id="email" name="email" placeholder="Email" required><br>
+    <input type="text" id="ramal" name="ramal" placeholder="Ramal" maxlength="4" required><br>
+    <input type="text" id="depto" name="depto" placeholder="Departamento" required><br> 
+</div>
+
+<!-- Formulário -->
+<form id="pedidoForm">
+    
+    <!-- Quantidade de formulários -->
+    <div id="tituloQuantidadeContainer">
+        <label for="quantidade" id="label-quantidade">Quantidade de solicitações:</label>
+        <select id="quantidade" name="quantidade">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+
+    <div id="formulariosContainer">
+        <!-- O primeiro formulário será exibido aqui -->
+        <div class="formulario">
+            <h2>Solicitação 1</h2>
+            <!-- Campos do formulário -->
+            <label for="empresa1">Empresa:</label>
+            <select id="empresa1" name="empresa1">
+                <option value="MANGUEIRA">MANGUEIRA</option>
+                <option value="TAPETE">TAPETE</option>
+            </select>
+
+            <label for="sav1">Projeto SAV:</label>
+            <select id="sav1" name="sav1" onchange="toggleCampoSav(1)">
+                <option value="" disabled selected>--selecione--</option>
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+            <input type="text" id="input-sav1" name="input-sav1" style="display: none;" placeholder="Digite o projeto SAV">
+
+            <label for="centroCusto1">Centro de Custo:</label>
+            <input type="text" id="centroCusto1" name="centroCusto1">
+
+            <label for="detalhamento1">Detalhamento/Finalidade:</label>
+            <textarea id="detalhamento1" name="detalhamento1" rows="4" cols="50"></textarea>
+          
+            <label for="descritivo1">Descritivo do Material:</label>
+            <input type="text" id="descritivo1" name="descritivo1">
+
+            <label for="ncm1">NCM:</label>
+            <input type="text" id="ncm1" name="ncm1">
+
+            <label for="importado1">Material Importado?</label>
+            <select id="importado1" name="importado1" onchange="toggleValor(1)">
+                <option value="" disabled selected>--selecione--</option>
+                <option value="NÃO">Não</option>
+                <option value="SIM">Sim</option>
+            </select>
+
+            <label for="valorEstimado1" id="labelValorEstimado1" style="display: none;">Digite o valor estimado:</label>
+            <input type="number" id="valorEstimado1" name="valorEstimado1" class="input-estimado" style="display: none;" onchange="calcularValor(1)" placeholder="Digite o valor estimado">
+
+            <div id="valorConvertido1" style="display: none;"></div>
+
+            <label for="tipoMaterial1">Tipo do Material:</label>
+            <select id="tipoMaterial1" name="tipoMaterial1" onchange="toggleCampoCodigoReferencia(1)">
+                <option value="" disabled selected>--selecione--</option>
+                <option value="MF">MATERIAL DE FERRAMENTARIA</option>
+                <option value="MP">MATERIA PRIMA</option>
+                <option value="MC">MATERIAL DE CONSUMO</option>
+                <option value="MN">MATERIAL DE MANUTENÇÃO</option>
+                <option value="GG">EPI'S</option>
+                <option value="AI">ATIVO IMOBILIZADO</option>
+                <option value="EM">EMBALAGEM</option>
+                <option value="SV">SERVIÇO</option>
+                <option value="FM">FERRAMENTAL</option>
+                <option value="MT">MATERIAL DE TERCEIROS</option>
+                <option value="DW">DATAWAKE</option>
+                <!-- Outras opções aqui -->
+            </select>
+
+            <!-- Campo adicional -->
+            <div id="campoAdicional1" style="display: none;">
+                <label for="campoExtra1">Escolha:</label>
+                <select id="campoExtra1" name="campoExtra1">
+                    <option value="">-- Selecione --</option>
+                    <option value="ALIMENTAÇÕES">ALIMENTAÇÕES</option>
+                    <option value="BRINDES">BRINDES</option>
+                    <option value="CESTA BÁSICA">CESTA BÁSICA</option>
+                    <option value="DIVERSOS">DIVERSOS</option>
+                    <option value="INFORMÁTICA">INFORMÁTICA</option>
+                    <option value="LIMPEZA">LIMPEZA</option>
+                    <option value="MATERIAL DE ESCRITORIO">MATERIAL DE ESCRITORIO</option>
+                    <option value="MATERIAL DE CONSTRUÇÃO">MATERIAL DE CONSTRUÇÃO</option>
+                    <option value="MATERIAL DE VEICULOS">MATERIAL DE VEICULOS</option>
+                    <option value="MOVEIS">MOVEIS</option>
+                    <option value="PRODUÇÃO">PRODUÇÃO</option>
+                    <option value="SEGURANÇA">SEGURANÇA</option>
+                </select>
+            </div>          
+             <!-- Campo adicional -->
+        <div id="campoAdicional1${i + 1}" style="display: none;">
+            <label for="campoExtra1${i + 1}">Escolha:</label>
+            <select id="campoExtra1${i + 1}" name="campoExtra1${i + 1}">
+                <option value="">-- Selecione --</option>
+                <option value="ALIMENTAÇÕES">TESTEEEEEE</option>
+                <option value="BRINDES">BRINDES</option>
+                <option value="CESTA BÁSICA">CESTA BÁSICA</option>
+                <option value="DIVERSOS">DIVERSOS</option>
+                <option value="INFORMÁTICA">INFORMÁTICA</option>
+                <option value="LIMPEZA">LIMPEZA</option>
+                <option value="MATERIAL DE ESCRITORIO">MATERIAL DE ESCRITORIO</option>
+                <option value="MATERIAL DE CONSTRUÇÃO">MATERIAL DE CONSTRUÇÃO</option>
+                <option value="MATERIAL DE VEICULOS">MATERIAL DE VEICULOS</option>
+                <option value="MOVEIS">MOVEIS</option>
+                <option value="PRODUÇÃO">PRODUÇÃO</option>
+                <option value="SEGURANÇA">SEGURANÇA</option>
+            </select>
+        </div>
+
+         <!-- Campo adicional -->
+         <div id="campoAdicional2${i + 1}" style="display: none;">
+            <label for="campoExtra2${i + 1}">Escolha:</label>
+            <select id="campoExtra2${i + 1}" name="campoExtra2${i + 1}">
+                <option value="">-- Selecione --</option>
+                <option value="PROTHEUS DATAWAKE">PROTHEUS DATAWAKE</option>
+                <option value="PROTHEUS PARANOA">PROTHEUS PARANOA</option>
+            </select>
+        </div>
+
+        <!-- Campo adicional -->
+        <div id="campoAdicional3${i + 1}" style="display: none;">
+                <label for="campoExtra3${i + 1}">Escolha:</label>
+                <select id="campoExtra3${i + 1}" name="campoExtra3${i + 1}">
+                    <option value="">-- Selecione --</option>
+                    <option value="UNIFORMES">UNIFORMES</option>
+                    <option value="EQUIPAMENTOS DE SEGURANÇA">EQUIPAMENTOS DE SEGURANÇA</option>
+                </select>
+            </div>
+
+            <!-- Campo adicional -->
+            <div id="campoAdicional4${i + 1}" style="display: none;">
+                <label for="campoExtra4${i + 1}">Escolha:</label>
+                <select id="campoExtra4${i + 1}" name="campoExtra4${i + 1}">
+                    <option value="">-- Selecione --</option>
+                    <option value="">-- Selecione --</option>
+                    <option value="MAQUINAS E EQUIPAMENTOS">MAQUINAS E EQUIPAMENTOS</option>
+                    <option value="MOVEIS E UTENSILIOS">MOVEIS E UTENSILIOS</option>
+                    <option value="VEICULOS">VEICULOS</option>
+                    <option value="BENFEITORIAS">BENFEITORIAS</option>
+                    <option value="PROCESSAMENTO DE DADOS">PROCESSAMENTO DE DADOS</option>
+                </select>
+            </div>
+
+             <!-- Novos campos para Ativo Imobilizado -->
+             <div id="campoUtilizacao${i + 1}" style="display: none;">
+                <label for="utilizacao${i + 1}">Utilização:</label>
+                <select id="utilizacao${i + 1}" name="utilizacao${i + 1}">
+                    <option value="">-- Selecione --</option>
+                    <option value="FABRICA">FABRICA</option>
+                    <option value="ADMINISTRATIVO">ADMINISTRATIVO</option>
+                    <option value="LABORATORIO">LABORATORIO</option>
+                </select>
+            </div>
+            
+            <div id="campoCondicao${i + 1}" style="display: none;">
+                <label for="condicao${i + 1}">Condição:</label>
+                <select id="condicao${i + 1}" name="condicao${i + 1}">
+                    <option value="">-- Selecione --</option>
+                    <option value="NOVO">NOVO</option>
+                    <option value="USADO">USADO</option>
+                </select>
+                </div>
+
+            <label for="unidadeMedida1">Unidade de Medida:</label> 
+            <select id="unidadeMedida1" name="unidadeMedida1">
+                <option value="" disabled selected>--selecione--</option>
+                <option value="BR- BARRA">BARRA</option>
+                <option value="BD- BALDE">BALDE</option>
+                <option value="CX- CAIXA">CAIXA</option>
+                <option value="CJ- CONJUNTO">CONJUNTO</option>
+                <option value="GL- GALAO">GALAO</option>
+                <option value="JG- JOGO">JOGO</option>
+                <option value="KIT- KIT">KIT</option>
+                <option value="LT- LATA">LATA</option>
+                <option value="L- LITRO">LITRO</option>
+                <option value="M- METRO">METRO</option>
+                <option value="M3- METRO CUBICO">METRO CUBICO</option>
+                <option value="M2- METRO QUADRADO">METRO QUADRADO</option>
+                <option value="MM- MILIMETRO">MILIMETRO</option>
+                <option value="PC- PEÇA">PEÇA</option>
+                <option value="PT- PACOTE">PACOTE</option>
+                <option value="P- PAR">PAR</option>
+                <option value="KG- QUILOGRAMA">QUILOGRAMA</option>
+                <option value="RL- ROLO">ROLO</option>
+                <option value="SC- SACO">SACO</option>
+                <!-- Outras opções aqui -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Botão Enviar -->
+    <button type="submit">Enviar Solicitação</button>
+</form>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

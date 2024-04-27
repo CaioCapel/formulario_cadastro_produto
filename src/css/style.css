@@ -1,0 +1,139 @@
+/* Definições globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../image/background-form-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fixa a imagem de plano de fundo */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Alinha todo o conteúdo ao centro */
+}
+
+/* Título principal */
+h1 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #333;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Contêiner de informações de contato */
+#contatoFixo {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto dentro do contêiner à esquerda */
+}
+
+/* Título do contêiner de informações de contato */
+#contatoFixo h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilo para campos de entrada, áreas de texto e seletores */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: calc(100% - 30px);
+    padding: 14px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #444;
+    display: block; /* Faz com que o seletor de quantidade ocupe a largura total do contêiner */
+    margin: 0 auto; /* Centraliza o seletor de quantidade */
+}
+
+/* Estilo para a label */
+label {
+    margin-bottom: 15px;
+    margin-top: 15px; /* Adiciona margem na parte inferior da label */
+    display: block;
+}
+
+#quantidade {
+    width: calc(100% - 30px); /* Ajusta a largura para ocupar quase toda a largura do contêiner */
+    max-width: 680px; /* Define uma largura máxima para o seletor de quantidade */
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #444;
+    display: block; /* Faz com que o seletor de quantidade ocupe a largura total do contêiner */
+    margin: 10px auto; /* Centraliza o seletor de quantidade */
+}
+
+textarea {
+    resize: none;
+}
+
+.input-estimado {
+    width: calc(100% - 30px);
+    padding: 14px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #444;
+    display: block; /* Faz com que o seletor de quantidade ocupe a largura total do contêiner */
+    margin: 0 auto; /* Centraliza o seletor de quantidade */
+}
+
+#label-quantidade{
+    font-size: 24px;
+    color: #444;
+}
+
+/* Estilo para cada formulário */
+.formulario {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin: 5px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto dentro do formulário à esquerda */
+}
+
+/* Título do formulário */
+.formulario h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Efeito hover para o botão de envio */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
